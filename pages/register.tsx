@@ -1,12 +1,12 @@
 import FormWrapper from "../components/FormWrapper";
 
-export default function Login() {
+export default function Register() {
   function handleSubmit() {}
 
   return (
-    <FormWrapper name="Login" linkText="Create account" linkHref="/register">
+    <FormWrapper name="Register" linkText="Create account" linkHref="/login">
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="login" />
+        <input type="text" placeholder="reegister" />
         <input type="password" placeholder="password" />
         <button>Done</button>
       </form>

@@ -4,8 +4,6 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <>
-      <h1 className={styles.title}>Letters to Santa Claus</h1>
-
       <p className={styles.description}>
         Read the letters wrighted to Santa Claus, you can also wright some
       </p>

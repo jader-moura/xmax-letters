@@ -3,4 +3,43 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  gap: 2rem;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.newLetter {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  right: 80px;
+  background-color: #fd595a;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  box-shadow: 0 0 10px #fff;
+}
+
+@media (max-width: 600px) {
+  .title {
+    line-height: 1.15;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    flex-direction: column;
+    height: 120px;
+    gap: 0;
+  }
 }
