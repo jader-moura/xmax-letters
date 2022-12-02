@@ -16,17 +16,17 @@ export default function Header() {
         <title>Xmax Letters</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className={styles.wrapper}>
-        <Link href="/">
+      <Link href="/">
+        <div className={styles.wrapper}>
           <Image src="/christmas-hat.png" width={80} height={80} alt="Logo" />
+          <h1 className={styles.title}>Xmax Letters</h1>
+        </div>
+      </Link>
+      {pathname === "/" && (
+        <Link href="/new-letter" className={styles.newLetter}>
+          Wright letter
         </Link>
-        <h1 className={styles.title}>Xmax Letters</h1>
-        {pathname === "/" && (
-          <Link href="/new-letter" className={styles.newLetter}>
-            Wright letter
-          </Link>
-        )}
-      </div>
+      )}
     </>
   );
 }

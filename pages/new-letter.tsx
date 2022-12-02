@@ -58,7 +58,7 @@ export default function NewLetter() {
                 className={styles.textField}
                 {...field}
                 rows={8}
-                placeholder="Write here your letter"
+                placeholder="Dear Santa Claus..."
               />
               {errors.description && (
                 <span role="alert" className={styles.error}>

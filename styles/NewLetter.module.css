@@ -19,7 +19,8 @@
 .error {
   color: #cc0033;
   display: inline-block;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 14px;
   line-height: 15px;
   margin: 5px 0 0;
 }
