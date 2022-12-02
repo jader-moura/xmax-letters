@@ -3,6 +3,8 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "../styles/Header.module.css";
+import { getSession, signOut } from "next-auth/react";
+import { GetServerSideProps } from "next";
 
 export default function Header() {
   const { pathname } = useRouter();
@@ -21,3 +23,22 @@ export default function Header() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req });
+
+  if (!session) {
+    signOut();
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {
+      session,
+    },
+  };
+};

@@ -10,6 +10,7 @@
 
 .grid {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -23,7 +24,7 @@
   text-decoration: none;
   background-color: #ffffff80;
   border-radius: 10px;
-  width: auto;
+  width: 100%;
 }
 
 .cardHeader {

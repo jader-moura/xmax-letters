@@ -8,6 +8,8 @@
   border-radius: 10px;
   max-width: 650px;
   min-width: 40vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .formWrapper h2 {
@@ -29,25 +31,6 @@
   text-align: center;
 }
 
-.formWrapper label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #000000;
-  font-weight: 400;
-}
-
-.formWrapper input,
-.formWrapper textarea {
-  border-radius: 4px;
-  border: none;
-  padding: 0.75rem 1rem;
-  background-color: #000000;
-  color: #ffffff;
-  min-width: 350px;
-  max-width: 80vw;
-}
-
 .formWrapper button {
   background-color: #fd595a;
   min-width: 350px;
@@ -59,4 +42,8 @@
   margin: 1rem 0 2rem 0;
   font-size: 1rem;
   font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
