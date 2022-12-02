@@ -1,6 +1,5 @@
 export interface Letter {
   id: number;
-  title: string;
   description: string;
   author: User;
 }

@@ -12,7 +12,7 @@ export default function Home({ letters }: any) {
 
       <div className={styles.grid}>
         {letters?.length > 0 ? (
-          letters.map(({ id, title, description, author }: Letter) => (
+          letters.map(({ id, description, author }: Letter) => (
             <div key={id} className={styles.card}>
               <div className={styles.cardHeader}>
                 {author?.image ? (

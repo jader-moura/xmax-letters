@@ -4,7 +4,7 @@ import FormWrapper from "../components/FormWrapper";
 import Router from "next/router";
 import styles from "../styles/NewLetter.module.css";
 
-export default function NewLetter(props: any) {
+export default function NewLetter() {
   const [errorMessage, setErrorMessage] = useState<string>("");
 
   const {
@@ -13,7 +13,6 @@ export default function NewLetter(props: any) {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      title: "",
       description: "",
     },
   });
@@ -46,38 +45,21 @@ export default function NewLetter(props: any) {
     <FormWrapper name="New Letter">
       <form onSubmit={onSubmit}>
         <Controller
-          name="title"
-          control={control}
-          rules={{
-            required: "Title is required, min 3 and max 14 characters",
-            maxLength: 14,
-            minLength: 3,
-          }}
-          render={({ field }) => (
-            <label className={styles.formLabel}>
-              Letter Title
-              <input {...field} className={styles.textField} />
-              {errors.title && (
-                <span role="alert" className={styles.error}>
-                  {errors.title.message}
-                </span>
-              )}
-            </label>
-          )}
-        />
-
-        <Controller
           name="description"
           control={control}
           rules={{
             required: "Description is required, max 280 characters",
-            maxLength: 280,
+            maxLength: 300,
             minLength: 1,
           }}
           render={({ field }) => (
             <label className={styles.formLabel}>
-              Letter Description
-              <textarea className={styles.textField} {...field} rows={7} />
+              <textarea
+                className={styles.textField}
+                {...field}
+                rows={8}
+                placeholder="Write here your letter"
+              />
               {errors.description && (
                 <span role="alert" className={styles.error}>
                   {errors.description.message}

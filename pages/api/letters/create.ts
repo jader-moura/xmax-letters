@@ -12,7 +12,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "POST") {
-    const { title, description } = req.body;
+    const { description } = req.body;
 
     try {
       const session: any = await getSession({ req });
@@ -21,7 +21,6 @@ export default async function handler(
       await fauna.query(
         q.Create(q.Collection("letters"), {
           data: {
-            title,
             description,
             author: {
               ...session?.user,
