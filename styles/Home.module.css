@@ -59,4 +59,8 @@
     line-height: 1;
     font-size: 1rem;
   }
+  .card {
+    max-width: 90%;
+    min-width: 80%;
+  }
 }
