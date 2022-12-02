@@ -48,7 +48,7 @@ export default function NewLetter() {
           name="description"
           control={control}
           rules={{
-            required: "Description is required, max 280 characters",
+            required: "The description is required, max 300 characters",
             maxLength: 300,
             minLength: 1,
           }}
