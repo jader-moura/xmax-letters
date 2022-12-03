@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const nextAuthCookieToken = request.cookies.get(
-    "next-auth.session-token"
+    process.env.NEXTAUTH_SECRET_TOKEN_PATH || ""
   )?.value;
 
   if (nextAuthCookieToken) {
