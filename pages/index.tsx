@@ -6,10 +6,6 @@ import { Letter } from "../types";
 export default function Home({ letters }: any) {
   return (
     <>
-      <p className={styles.description}>
-        Read the letters written to Santa Claus, you can also write some
-      </p>
-
       <div className={styles.grid}>
         {letters?.length > 0 ? (
           letters.map(({ id, description, author }: Letter) => (
