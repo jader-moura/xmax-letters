@@ -58,7 +58,7 @@ export default function NewLetter() {
                 className={styles.textField}
                 {...field}
                 rows={8}
-                placeholder="Dear Santa Claus..."
+                placeholder="Dear Santa..."
               />
               {errors.description && (
                 <span role="alert" className={styles.error}>
@@ -70,7 +70,7 @@ export default function NewLetter() {
         />
 
         <button type="submit" className={styles.submitButton}>
-          Create
+          Send letter
         </button>
         {errorMessage && (
           <p role="alert" className="errorMessage">
